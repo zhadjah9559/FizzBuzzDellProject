@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Linq;
+
 
 namespace FizzBuzzDellProject
 {
@@ -13,16 +15,15 @@ namespace FizzBuzzDellProject
 
 
 
+			//Console.WriteLine(FizzBuzz(1));  //1
 
-			Console.WriteLine(FizzBuzz(1));  //1
+			//Console.WriteLine(FizzBuzz(2));  //2
 
-			Console.WriteLine(FizzBuzz(2));  //2
+			//Console.WriteLine(FizzBuzz(3));  //Fizz
 
-			Console.WriteLine(FizzBuzz(3));  //Fizz
+			//Console.WriteLine(FizzBuzz(5));  //buzz
 
-			Console.WriteLine(FizzBuzz(5));  //buzz
-
-			Console.WriteLine(FizzBuzz(-3)); //Fizz
+			//Console.WriteLine(FizzBuzz(-3)); //Fizz
 			for (int i = 1; i < 100; i++)
 			{
 				Console.WriteLine(i + ";" + FizzBuzz(i));
@@ -34,20 +35,33 @@ namespace FizzBuzzDellProject
 		public static string FizzBuzz(int num)
 		{
 			Dictionary<int, string> dict = new Dictionary<int, string>();
-
+			dict.Add(1, "OOP");
 			dict.Add(3, "Fizz");
 			dict.Add(5, "Buzz");
 			dict.Add(7, "Hello");
 			dict.Add(9, "World");
 
+			List<int> keys = dict.Keys.ToList();
+			List<int> divisibleKeys = new List<int>();
+
+			//find all the keys that are divisible by the number
+			foreach(var key in keys)
+            {
+				if (num % key == 0)
+					divisibleKeys.Add(key);
+            }
+
+			
+
+
 			//if the user input is not div by any number
-			if (!dict.ContainsKey(num))
-				return num.ToString();
-			 
+			//if ()
+				//return num.ToString();
+
 
 			//if user input is div by one of the keys
-			else /*if( dict.ContainsKey(num) == true )*/
-				
+			//else /*if( dict.ContainsKey(num) == true )*/
+				//int value;
 
 
 
@@ -67,6 +81,13 @@ namespace FizzBuzzDellProject
 				return "buzz";
 			else
 				return num.ToString();
+
+
+
+
+
+
+
 		}
 	}
 
