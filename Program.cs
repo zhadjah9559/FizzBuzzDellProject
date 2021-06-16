@@ -70,7 +70,7 @@ namespace FizzBuzzDellProject
 					divisibleKeys.Add(key);
             }
 
-			//if nothing is divisible or zero is the input
+			//if nothing is divisible or zero is the input, simply return the number itself
 			if (divisibleKeys.Count == 0 || num == 0)
 				return num.ToString();
 
@@ -80,7 +80,6 @@ namespace FizzBuzzDellProject
 				//String builder is something I've been seeing in a lot of Bob Tabor 
 				//and Scott Hanselman videos so I decided to give it a shot
 				StringBuilder returnStatement = new StringBuilder();
-
 				returnStatement.Append( num );
 
 				//Append all the values from the keys and then return the string
