@@ -10,18 +10,18 @@ namespace FizzBuzzDellProject
     {
         static void Main(string[] args)
         {
-			//Regex regex = new Regex("");
+			Console.WriteLine(FizzBuzz(0));
 
-			Console.WriteLine(FizzBuzz(3));  //OOP Fizz Buzz Hello World
+			Console.WriteLine(FizzBuzz(1));  //OOP
+
+			Console.WriteLine(FizzBuzz(2));  //2
+
+			Console.WriteLine(FizzBuzz(3));  //OOP Fizz 
+
+			Console.WriteLine(FizzBuzz(4));  //4 
 
 
-			//Console.WriteLine(FizzBuzz(1));  //1
-
-			//Console.WriteLine(FizzBuzz(2));  //2
-
-			//Console.WriteLine(FizzBuzz(3));  //Fizz
-
-			//Console.WriteLine(FizzBuzz(5));  //buzz
+			
 
 			//Console.WriteLine(FizzBuzz(-3)); //Fizz
 			//for (int i = 1; i < 100; i++)
@@ -51,24 +51,28 @@ namespace FizzBuzzDellProject
 					divisibleKeys.Add(key);
             }
 
-			StringBuilder returnStatement = new StringBuilder();
+			//if nothing is divisible
+			if (divisibleKeys.Count == 0 || num == 0)
+				return num.ToString();
 
-			//Append all the values from the keys and then return the string
-			foreach(var key in divisibleKeys) 
-			{
-				returnStatement.Append( key +" | "+ dict[key] + "\n" );
+			//if there is a divisible number
+			else 
+            {
+				StringBuilder returnStatement = new StringBuilder();
+
+				returnStatement.Append( num );
+
+
+				//Append all the values from the keys and then return the string
+				foreach (var key in divisibleKeys)
+				{
+					returnStatement.Append( " | " + dict[key]  );
+				}
+
+				return returnStatement.ToString();
 			}
-
-			return returnStatement.ToString();
-
-
-			
-
-
-
 		}
 	}
-
 }
 
 
