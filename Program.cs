@@ -10,27 +10,27 @@ namespace FizzBuzzDellProject
     {
         static void Main(string[] args)
         {
-			Console.WriteLine(FizzBuzz(0));
+			Console.WriteLine(FizzBuzz(0));    //0
 
-			Console.WriteLine(FizzBuzz(1));  //OOP
+			Console.WriteLine(FizzBuzz(1));    //OOP
 
-			Console.WriteLine(FizzBuzz(2));  //2
+			Console.WriteLine(FizzBuzz(105));  //OOP | Fizz | Buzz | Hello
 
-			Console.WriteLine(FizzBuzz(3));  //OOP Fizz 
+			Console.WriteLine(FizzBuzz(45));   //OOP | Fizz | Buzz | World 
 
-			Console.WriteLine(FizzBuzz(4));  //4 
+			Console.WriteLine(FizzBuzz(21));   //OOP | Fizz | Hello
 
+			Console.WriteLine(FizzBuzz(189));  //OOP | Fizz | Hello | World
 
-			
+			Console.WriteLine(FizzBuzz(105));  //OOP | Buzz | Hello 
 
-			//Console.WriteLine(FizzBuzz(-3)); //Fizz
-			//for (int i = 1; i < 100; i++)
-			//{
-			//	Console.WriteLine(i + ";" + FizzBuzz(i));
-			//}
+			Console.WriteLine("========================== \n");
 
-			//Console.WriteLine(FizzBuzz(105));
-		}
+            for (int i = 1; i <= 100; i++)
+            {
+                Console.WriteLine( FizzBuzz(i));
+            }
+        }
 
 		public static string FizzBuzz(int num)
 		{
@@ -61,7 +61,6 @@ namespace FizzBuzzDellProject
 				StringBuilder returnStatement = new StringBuilder();
 
 				returnStatement.Append( num );
-
 
 				//Append all the values from the keys and then return the string
 				foreach (var key in divisibleKeys)
