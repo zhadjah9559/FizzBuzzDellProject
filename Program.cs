@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
-
+using System.Text;
 
 namespace FizzBuzzDellProject
 {
@@ -12,7 +12,7 @@ namespace FizzBuzzDellProject
         {
 			//Regex regex = new Regex("");
 
-
+			Console.WriteLine(FizzBuzz(3));  //OOP Fizz Buzz Hello World
 
 
 			//Console.WriteLine(FizzBuzz(1));  //1
@@ -24,12 +24,12 @@ namespace FizzBuzzDellProject
 			//Console.WriteLine(FizzBuzz(5));  //buzz
 
 			//Console.WriteLine(FizzBuzz(-3)); //Fizz
-			for (int i = 1; i < 100; i++)
-			{
-				Console.WriteLine(i + ";" + FizzBuzz(i));
-			}
+			//for (int i = 1; i < 100; i++)
+			//{
+			//	Console.WriteLine(i + ";" + FizzBuzz(i));
+			//}
 
-			Console.WriteLine(FizzBuzz(105));
+			//Console.WriteLine(FizzBuzz(105));
 		}
 
 		public static string FizzBuzz(int num)
@@ -51,40 +51,18 @@ namespace FizzBuzzDellProject
 					divisibleKeys.Add(key);
             }
 
+			StringBuilder returnStatement = new StringBuilder();
+
+			//Append all the values from the keys and then return the string
+			foreach(var key in divisibleKeys) 
+			{
+				returnStatement.Append( key +" | "+ dict[key] + "\n" );
+			}
+
+			return returnStatement.ToString();
+
+
 			
-
-
-			//if the user input is not div by any number
-			//if ()
-				//return num.ToString();
-
-
-			//if user input is div by one of the keys
-			//else /*if( dict.ContainsKey(num) == true )*/
-				//int value;
-
-
-
-			if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0)
-				return "FizzBuzz Hello";
-
-			else if (num % 3 == 0 && num % 5 == 0)
-				return "FizzBuzz";
-
-			else if (num % 7 == 0)
-				return "Hello";
-
-			else if (num % 3 == 0)
-				return "Fizz";
-
-			else if (num % 5 == 0)
-				return "buzz";
-			else
-				return num.ToString();
-
-
-
-
 
 
 
