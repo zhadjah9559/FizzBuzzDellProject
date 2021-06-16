@@ -14,26 +14,27 @@ namespace FizzBuzzDellProject
 
 			Console.WriteLine(FizzBuzz(0));    //0
 
-			Console.WriteLine(FizzBuzz(1));    //OOP
+			Console.WriteLine(FizzBuzz(1));    //1 | OOP
 
-			Console.WriteLine(FizzBuzz(3));    //OOP | Fizz
+			Console.WriteLine(FizzBuzz(3));    //3 | OOP | Fizz
 
-			Console.WriteLine(FizzBuzz(5));    //OOP | Buzz
+			Console.WriteLine(FizzBuzz(5));    //5 | OOP | Buzz
 
-			Console.WriteLine(FizzBuzz(7));    //OOP | Hello
+			Console.WriteLine(FizzBuzz(7));    //7 | OOP | Hello
 
-			Console.WriteLine(FizzBuzz(9));    //OOP | Fizz | World
+			Console.WriteLine(FizzBuzz(9));    //9 | OOP | Fizz | World
 
-			Console.WriteLine(FizzBuzz(21));   //OOP | Fizz | Hello
+			Console.WriteLine(FizzBuzz(21));   //21 | OOP | Fizz | Hello
 
-			Console.WriteLine(FizzBuzz(15));   //OOP | Fizz | Buzz
+			Console.WriteLine(FizzBuzz(15));   //15 | OOP | Fizz | Buzz
 
-			Console.WriteLine(FizzBuzz(45));   //OOP | Fizz | Buzz | World 
+			Console.WriteLine(FizzBuzz(45));   //45 | OOP | Fizz | Buzz | World 
 
 			Console.WriteLine(FizzBuzz(105));  //105 is outside of Constraints
 
 			Console.WriteLine("========================== \n");
 
+			//this will print out all outputs from 1 - 100
             for (int i = 1; i <= 100; i++)
             {
                 Console.WriteLine( FizzBuzz(i));
@@ -51,7 +52,7 @@ namespace FizzBuzzDellProject
 
 		    //The Dictionary's keys will help keep track of which numbers 
 			//are divisible. Making it easy to use the keys to access the values
-			//of the the divisible numbers.
+			//of the divisible numbers.
 		    Dictionary<int, string> dict = new Dictionary<int, string>();
 			dict.Add(1, "OOP");
 			dict.Add(3, "Fizz");
@@ -76,6 +77,8 @@ namespace FizzBuzzDellProject
 			//if there is at least one divisible number 
 			else 
             {
+				//String builder is something I've been seeing in a lot of Bob Tabor 
+				//and Scott Hanselman videos so I decided to give it a shot
 				StringBuilder returnStatement = new StringBuilder();
 
 				returnStatement.Append( num );
